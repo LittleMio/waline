@@ -9,7 +9,7 @@ services:
     ports:
       - 8360:8360
     volumes:
-      - ${PWD}/data:/app/data
+      - ./data:/app/data
     environment:
       TZ: 'Asia/Shanghai'
       # Sqlite 数据库路径
@@ -24,6 +24,14 @@ services:
       SECURE_DOMAINS: 'littlebell.top'
       # 基于 IP 的评论发布频率限制 30 秒
       IPQPS: 30
+
+      #### 服务器
+      # 数据库名称
+      MYSQL_DB: ''
+      # 数据库用户名
+      MYSQL_USER: ''
+      # 数据库密码
+      MYSQL_PASSWORD: ''
       # MySQL 服务的地址
       MYSQL_HOST: 'xxx'
       # MySQL 服务的端口
