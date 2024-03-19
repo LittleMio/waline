@@ -12,9 +12,19 @@ services:
       - ${PWD}/data:/app/data
     environment:
       TZ: 'Asia/Shanghai'
-      SQLITE_PATH: '/app/data'
-      JWT_TOKEN: 'VgwPHLxkRUZfIl81QJO29zE7pK60nTFd'
+      # Sqlite 数据库路径
+      # SQLITE_PATH: '/app/data'
+      # Jwt 密钥
+      JWT_TOKEN: 'xxx'
+      # 网站名称
       SITE_NAME: 'LittleMioのBlog'
+      # 网站域名
       SITE_URL: 'https://blog.littlebell.top'
+      # 安全域名配置，支持逗号分隔配置多个域名
       SECURE_DOMAINS: 'littlebell.top'
-      AUTHOR_EMAIL: 'hoyo-os@outlook.com'
+      # 基于 IP 的评论发布频率限制 30 秒
+      IPQPS: 30
+      # MySQL 服务的地址
+      MYSQL_HOST: ''
+      # MySQL 服务的端口
+      MYSQL_PORT: 3306
