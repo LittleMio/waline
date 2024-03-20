@@ -39,7 +39,9 @@ export interface WalineInstance {
 
 export const init = ({
   el = '#waline',
-  path = window.location.pathname,
+  path = window.location.pathname.endsWith('/')
+    ? window.location.pathname.slice(0, -1)
+    : window.location.pathname,
   comment = false,
   pageview = false,
   ...initProps
